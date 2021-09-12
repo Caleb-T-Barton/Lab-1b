@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lab1a</title>
+  <!-- Links to stylesheets -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+  <!-- Your visible elements -->
+  <nav>
+    <a href="https://us.yt-industries.com/">YT Industries</a>
+  </nav>
+  <h1 class="title-font">Task List</h1>
+  <input type="checkbox" id="sort by date" class="toggle-switch">
+  <label for="sort by date">Sort by date</label>
+  <input type="checkbox" id="filter completed tasks" class="toggle-switch">
+  <label for="filter completed tasks">Filter completed tasks</label>
+  <ul class="tasklist">
+    <li class="task">
+      <input type="checkbox" id="task1" class="task-done checkbox-icon" checked>
+      <span class="task-description line-through borders">Finish Lab1a</span>
+      <span class="task-date">09-07-21</span>
+      <button type="button" class="task-delete material-icon">remove</button>
+    </li>
+    <br>
+    <li class="task">
+      <input type="checkbox" id="task2" class="task-done checkbox-icon">
+      <span class="task-description borders">Read Hamlet</span>
+      <span class="task-date">09-04-21</span>
+      <button type="button" class="task-delete material-icon">remove</button>
+    </li>
+  </ul>
+  <form class="form-create-task" onsubmit="on_submit(event)">
+    <input type="text" name="description" class="my-description" required>
+    <br>
+    <input type="date" name="date" required>
+    <br>
+    <button type="submit" class="round-button">Create Task</button>
+    <br>
+  </form>
+  <script src="js/script.js"></script>
+</body>
+</html>
